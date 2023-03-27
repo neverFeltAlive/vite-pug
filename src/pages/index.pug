@@ -1,0 +1,43 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Vite App
+        style(type='text/css').
+            body {
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: #242424;
+                color: #f9f9f9;
+            }
+
+            ul {
+                font-size: 24px;
+                text-transform: capitalize;
+                width: 50%;
+                min-width: 400px;
+                list-style: none;
+            }
+
+            li:not(:last-child) {
+                margin-bottom: 15px;
+            }
+
+            a {
+                text-decoration: none;
+                color: #f9f9f9;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            a:hover {
+                color: black;
+            }
+    body
+        h1 Индексная страница
+        ul#links-list
+        script(type="module", src="/index.js")
