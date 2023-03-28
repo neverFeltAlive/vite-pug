@@ -30,10 +30,10 @@ export default {
 ```
 
 You can pass the following options to the plugin:
-    baseDir (string, required): the base directory of your project.
-    publicDir (string, required): the public directory of your project.
-    outputDir (string, optional): the output directory where the sprite file will be saved. Defaults to 'dist'.
-    isDev (boolean, optional): a flag indicating whether the plugin is being used in development mode or not. Defaults to false.
+    - baseDir (string, required): the base directory of your project.
+    - publicDir (string, required): the public directory of your project.
+    - outputDir (string, optional): the output directory where the sprite file will be saved. Defaults to 'dist'.
+    - isDev (boolean, optional): a flag indicating whether the plugin is being used in development mode or not. Defaults to false.
     
 ### Examples
 
