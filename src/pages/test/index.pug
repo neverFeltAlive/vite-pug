@@ -1,8 +1,9 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Vite App
-    body
-        h1 Test
+extends ../../utils/templates
+
+block title
+    title Page 2
+
+
+block content
+    h1 Test page
+    +svg('vite')
