@@ -35,3 +35,19 @@ You can pass the following options to the plugin:
     outputDir (string, optional): the output directory where the sprite file will be saved. Defaults to 'dist'.
     isDev (boolean, optional): a flag indicating whether the plugin is being used in development mode or not. Defaults to false.
     
+### Examples
+
+project
+├── assets
+│   └── icons
+│       ├── icon1.svg
+│       └── icon2.svg
+├── public
+│   ├── index.html
+│   └── sprite.svg
+├── dist
+│   └── index.html
+├── vite.config.js
+└── package.json
+
+    
