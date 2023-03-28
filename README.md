@@ -3,8 +3,8 @@
 This is a configuration for Vite for simple projects which require no frameworks.
 It includes:
 - custom pug plugin
-- [custom plugin for SVG sprites](#working-with-pages)
-- custom utility to dynamically detect all necessary pages
+- [custom plugin for SVG sprites](#vite-svg-sprite-plugin)
+- [custom utility to dynamically detect all necessary pages](#working-with-pages)
 
 ## Working with pages
 
