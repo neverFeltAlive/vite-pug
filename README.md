@@ -2,7 +2,7 @@
 
 This is a configuration for Vite for simple projects which require no frameworks.
 It includes:
-- custom pug plugin
+- [custom pug plugin](https://github.com/yend724/vite-pug-boilerplate)
 - [custom plugin for SVG sprites](#vite-svg-sprite-plugin)
 - [custom utility to dynamically detect all necessary pages](#working-with-pages)
 
