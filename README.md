@@ -27,7 +27,7 @@ export default {
     })
   ]
 }
-'''
+```
 
 You can pass the following options to the plugin:
     baseDir (string, required): the base directory of your project.
