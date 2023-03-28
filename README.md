@@ -37,6 +37,7 @@ You can pass the following options to the plugin:
     
 ### Examples
 
+```bash
 project
 ├── assets
 │   └── icons
@@ -49,5 +50,6 @@ project
 │   └── index.html
 ├── vite.config.js
 └── package.json
+```
 
     
