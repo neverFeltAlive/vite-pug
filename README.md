@@ -35,6 +35,7 @@ Simply create a ***pages*** folder inside your root directory (in my case it is 
 > - index.js
 > - index.pug
 > - index.json
+>
 > directly in the ***pages*** directory. They are used to create an Index page which contains all the links to the existing pages on the project. This files are not  going to be included in your production build.
 
 ## Vite SVG Sprite Plugin
