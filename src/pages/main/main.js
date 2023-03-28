@@ -1,6 +1,6 @@
 import '../../styles/style.css'
 
-import { setupCounter } from '../../components/counter/counter.js'
+import {setupCounter} from '../../components/counter/counter.js'
 
 document.querySelector('#app').innerHTML = `
   <div>

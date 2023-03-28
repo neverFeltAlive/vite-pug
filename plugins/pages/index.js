@@ -19,7 +19,11 @@ const getPages = function () {
             .filter((dir) => dir.isDirectory())
             .forEach((dir) => {
                 const indexFile = getPageIndex(dir.name)
-                indexFile && pages.push({name: dir.name, src: `/${dir.name}/`, path: resolve(pluginConfig.pagesDir, dir.name, indexFile)})
+                indexFile && pages.push({
+                    name: dir.name,
+                    src: `/${dir.name}/`,
+                    path: resolve(pluginConfig.pagesDir, dir.name, indexFile)
+                })
             })
         return pages
     }
