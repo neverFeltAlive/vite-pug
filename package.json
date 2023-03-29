@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "format": "prettier --write src/**/**.{js,pug,scss,css}"
+    "format": "prettier --write src/**/**.{js,pug,scss,css}",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@prettier/plugin-pug": "^2.4.2",
@@ -16,6 +17,8 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-pug": "^1.2.5",
     "fast-glob": "^3.2.12",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.0",
     "prettier": "^2.8.7",
     "pug": "^3.0.2",
     "sass": "^1.60.0",
@@ -24,5 +27,16 @@
     "svgo": "^3.0.2",
     "vite": "^4.2.0",
     "vite-plugin-eslint": "^1.8.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,pug,scss,css}": [
+      "npx prettier --write",
+      "npx eslint --fix"
+     ]
   }
 }
