@@ -12,7 +12,7 @@
   "pugSortAttributes": "asc",
   "pugWrapAttributesThreshold": 2,
   "pugEmptyAttributes": "none",
-  "pugExplicitDiv": true,
+  "pugExplicitDiv": false,
 
   "importOrderSeparation": true,
   "importOrder": [
