@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier --write src/**/**.{js,pug,scss,css}"
   },
   "devDependencies": {
     "@prettier/plugin-pug": "^2.4.2",

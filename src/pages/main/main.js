@@ -1,6 +1,6 @@
-import '../../styles/style.css'
+import { setupCounter } from '@components/counter/counter.js';
 
-import {setupCounter} from '../../components/counter/counter.js'
+import '@styles/style.css';
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -12,6 +12,6 @@ document.querySelector('#app').innerHTML = `
       Click on the Vite logo to learn more
     </p>
   </div>
-`
+`;
 
-setupCounter(document.querySelector('#counter'))
+setupCounter(document.querySelector('#counter'));

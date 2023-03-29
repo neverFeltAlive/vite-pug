@@ -11,7 +11,12 @@
   "importOrder": [
     "^vite$",
     "<THIRD_PARTY_MODULES>",
-    "^./plugins",
+    "@plugins",
+    "@pages",
+    "@components",
+    "@utils",
+    "@styles",
+    "@assets",
     "^./|^../"
   ]
 }

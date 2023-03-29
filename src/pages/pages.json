@@ -1,1 +1,6 @@
-{"links":[{"name":"main","src":"/main/","path":"D:\\frontend\\selfdev\\vite\\src\\pages\\main\\index.pug"},{"name":"test","src":"/test/","path":"D:\\frontend\\selfdev\\vite\\src\\pages\\test\\index.pug"}]}
+{
+  "links": [
+    { "name": "main", "src": "/main/", "path": "D:\\frontend\\selfdev\\vite\\src\\pages\\main\\index.pug" },
+    { "name": "test", "src": "/test/", "path": "D:\\frontend\\selfdev\\vite\\src\\pages\\test\\index.pug" }
+  ]
+}
