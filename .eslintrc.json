@@ -1,5 +1,25 @@
 {
   "plugins": [
     "pug"
-  ]
+  ],
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "root": true,
+  "extends": ["eslint:recommended", "prettier"],
+  "rules": {
+    "semi": "warn",
+    "no-console": "error",
+    "no-debugger": "error",
+    "camelcase": "warn",
+    "no-var": "error"
+  },
+  "ignorePatterns": ["plugins/*/**"]
 }

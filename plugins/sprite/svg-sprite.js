@@ -1,7 +1,8 @@
-import { join, resolve } from 'path';
-import { optimize } from 'svgo';
 import glob from 'fast-glob';
 import { readFile, promises as fsPromises } from 'fs';
+import { join } from 'path';
+import { optimize } from 'svgo';
+
 import { logSuccess, logTitle, logWarning } from '../logger/index.js';
 
 /**
@@ -17,7 +18,9 @@ function optimizeSvg(content) {
 /**
  * Processes svg from icons folder and injects a link to a sprite file into html
  * @param baseDir - base directory of a project
+ * @param publicDir - directory for static assets
  * @param outputDir - output directory where sprite file is saved
+ * @param isDev - is project running in development
  * @return {unknown|{transformIndexHtml(*): Promise<unknown>, name: string}}
  */
 export default function svgSpritePlugin({

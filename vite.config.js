@@ -1,7 +1,9 @@
-import { resolve } from 'path';
 import { defineConfig } from 'vite';
-import pug from './plugins/pug/vite-plugin-pug.js';
+
+import { resolve } from 'path';
+
 import { getRollupInput } from './plugins/pages/index.js';
+import pug from './plugins/pug/vite-plugin-pug.js';
 import svgSpritePlugin from './plugins/sprite/svg-sprite.js';
 
 const rootDir = resolve(__dirname, 'src');
@@ -36,4 +38,3 @@ export default defineConfig(({ command }) => {
     },
   };
 });
-
