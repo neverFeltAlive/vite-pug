@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "format": "prettier --write src/**/**.{js,pug,scss,css}",
+    "format": "prettier --write src/**/**.{js,pug,scss,css} && eslint --fix",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -35,7 +35,7 @@
   },
   "lint-staged": {
     "**/*.{js,pug,scss,css}": [
-      "npx prettier --write",
+      "npx prettier --write src/**/**.{js,pug,scss,css}",
       "npx eslint --fix"
      ]
   }
