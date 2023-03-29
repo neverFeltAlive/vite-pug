@@ -6,6 +6,18 @@ It includes:
 - [custom plugin for SVG sprites](#vite-svg-sprite-plugin)
 - [custom utility to dynamically detect all necessary pages](#working-with-pages)
 
+## Installation
+
+You can simply clone this repository and install neccessary dependensies with:
+```bash
+npm i
+```
+
+Or use an npm package for automated setup:
+```bash
+npx create-vite-native-app
+```
+
 ## Working with pages
 
 To make work easier and project structure much more pleasant I created a simple utility which detects pages automatically and configures Vite accordingly.
