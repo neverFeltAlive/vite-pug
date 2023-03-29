@@ -36,6 +36,6 @@
     "**/*.{js,pug,scss,css}": [
       "npx prettier --write src/**/**.{js,pug,scss,css}",
       "npx eslint --fix"
-     ]
+    ]
   }
 }

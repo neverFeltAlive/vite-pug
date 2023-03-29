@@ -1,5 +1,7 @@
+import configJSON from '/pagesconfig.json';
 import { readdirSync, writeFile } from 'fs';
 import { join, resolve } from 'path';
+
 import { logError, logSuccess, logTitle } from '../logger/index.js';
 
 let pluginConfig = {};
@@ -37,8 +39,10 @@ const getPages = (function () {
  */
 export function getRollupInput(config, isDev = false) {
   pluginConfig = config;
+  pluginConfig.enableIndexPage = configJSON.enableIndexPage === undefined ?? configJSON.enableIndexPage;
+
   const pages = getPages().map((page) => page.path);
-  generatePagesJSON();
+  pluginConfig.enableIndexPage && generatePagesJSON();
 
   // Add index page if in dev
   isDev && pages.push(join(pluginConfig.pagesDir, 'index.pug'));
@@ -52,9 +56,7 @@ export function getRollupInput(config, isDev = false) {
  * @return {false|string}
  */
 function getPageIndex(dirName) {
-  const indexFile = readdirSync(join(pluginConfig.pagesDir, dirName)).find(
-    (file) => file === 'index.pug'
-  );
+  const indexFile = readdirSync(join(pluginConfig.pagesDir, dirName)).find((file) => file === 'index.pug');
   return !!indexFile && join(pluginConfig.pagesDir, dirName, indexFile);
 }
 
@@ -71,22 +73,17 @@ function generatePagesJSON() {
   });
 
   // Write to file
-  writeFile(
-    `${pluginConfig.root}/pages.json`,
-    JSON.stringify(json),
-    'utf8',
-    (errors) => {
-      //region Logs
-      console.log();
-      logTitle('Pages Configuration');
-      if (!errors) {
-        logSuccess('Successfully configured pages.json');
-      } else {
-        logError('Failed to configure pages.json');
-        console.error(errors);
-      }
-      console.log();
-      //endregion
+  writeFile(`${pluginConfig.root}/pages.json`, JSON.stringify(json), 'utf8', (errors) => {
+    //region Logs
+    console.log();
+    logTitle('Pages Configuration');
+    if (!errors) {
+      logSuccess('Successfully configured pages.json');
+    } else {
+      logError('Failed to configure pages.json');
+      console.error(errors);
     }
-  );
+    console.log();
+    //endregion
+  });
 }
