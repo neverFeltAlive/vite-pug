@@ -1,7 +1,7 @@
-import configJSON from '/pagesconfig.json';
 import { readdirSync, writeFile } from 'fs';
 import { join, resolve } from 'path';
 
+import configJSON from '../../pagesconfig.json';
 import { logError, logSuccess, logTitle } from '../logger/index.js';
 
 let pluginConfig = {};
