@@ -2,12 +2,19 @@
   "plugins": [
     "@prettier/plugin-pug"
   ],
+
   "trailingComma": "es5",
   "tabWidth": 2,
   "semi": true,
   "singleQuote": true,
-  "importOrderSeparation": true,
+
   "pugSingleQuote": false,
+  "pugSortAttributes": "asc",
+  "pugWrapAttributesThreshold": 2,
+  "pugEmptyAttributes": "none",
+  "pugExplicitDiv": true,
+
+  "importOrderSeparation": true,
   "importOrder": [
     "^vite$",
     "<THIRD_PARTY_MODULES>",

@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 
-import { resolve } from 'path';
+import { join, resolve } from 'path';
 
 import { getRollupInput } from './plugins/pages/index.js';
 import pug from './plugins/pug/vite-plugin-pug.js';
@@ -27,14 +27,21 @@ export default defineConfig(({ command }) => {
     build: {
       outDir: resolve(__dirname, 'dist'),
       rollupOptions: {
-        input: getRollupInput(
-          { root, rootDir, port, pagesDir },
-          command !== 'build'
-        ),
+        input: getRollupInput({ root, rootDir, port, pagesDir }, command !== 'build'),
       },
     },
     server: {
       port: port,
+    },
+    resolve: {
+      alias: {
+        '@components': join(rootDir, 'components'),
+        '@plugins': resolve(__dirname, 'plugins'),
+        '@pages': join(rootDir, 'pages'),
+        '@utils': join(rootDir, 'utils'),
+        '@styles': join(rootDir, 'styles'),
+        '@assets': join(rootDir, 'assets'),
+      },
     },
   };
 });
