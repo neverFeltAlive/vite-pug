@@ -1,10 +1,10 @@
 import { defineConfig } from 'vite';
 
 import { join, resolve } from 'path';
+import { getRollupInput } from 'vite-mpa';
+import svgSpritePlugin from 'vite-sprite-svg';
 
-import { getRollupInput } from './plugins/pages/index.js';
 import pug from './plugins/pug/vite-plugin-pug.js';
-import svgSpritePlugin from './plugins/sprite/svg-sprite.js';
 
 const rootDir = resolve(__dirname, 'src');
 const pagesDir = resolve(rootDir, 'pages');
