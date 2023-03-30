@@ -29,7 +29,7 @@
     "vite": "^4.2.0",
     "vite-mpa": "^1.0.6",
     "vite-plugin-eslint": "^1.8.1",
-    "vite-sprite-svg": "^1.0.4"
+    "vite-sprite-svg": "^1.0.5"
   },
   "husky": {
     "hooks": {

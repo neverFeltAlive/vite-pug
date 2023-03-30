@@ -29,6 +29,7 @@ export default defineConfig(({ command }) => {
       rollupOptions: {
         input: getRollupInput({ root, rootDir, port, pagesDir }, command !== 'build'),
       },
+      emptyOutDir: true,
     },
     server: {
       port: port,
