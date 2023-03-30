@@ -19,7 +19,7 @@
     "fast-glob": "^3.2.12",
     "husky": "^8.0.0",
     "lint-staged": "^13.2.0",
-    "nodejs-logger-n": "^1.0.2",
+    "nodejs-logger-n": "^1.0.3",
     "prettier": "^2.8.7",
     "pug": "^3.0.2",
     "sass": "^1.60.0",
@@ -27,9 +27,9 @@
     "stylelint-prettier": "^3.0.0",
     "svgo": "^3.0.2",
     "vite": "^4.2.0",
-    "vite-mpa": "^1.0.4",
+    "vite-mpa": "^1.0.6",
     "vite-plugin-eslint": "^1.8.1",
-    "vite-sprite-svg": "^1.0.3"
+    "vite-sprite-svg": "^1.0.4"
   },
   "husky": {
     "hooks": {
