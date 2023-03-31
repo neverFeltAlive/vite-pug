@@ -4,12 +4,13 @@ import { join, resolve } from 'path';
 import { getRollupInput } from 'vite-mpa';
 import svgSpritePlugin from 'vite-sprite-svg';
 
+import pagesConfig from './pagesconfig.json';
 import pug from './plugins/pug/vite-plugin-pug.js';
 
 const rootDir = resolve(__dirname, 'src');
 const pagesDir = resolve(rootDir, 'pages');
 const publicDir = resolve(__dirname, 'public');
-const root = './src/pages';
+const root = './src';
 const port = 3000;
 
 export default defineConfig(({ command }) => {
@@ -33,6 +34,7 @@ export default defineConfig(({ command }) => {
     },
     server: {
       port: port,
+      open: pagesConfig?.enableIndexPage ? '/pages/' : '',
     },
     resolve: {
       alias: {
