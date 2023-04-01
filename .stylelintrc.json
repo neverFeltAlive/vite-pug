@@ -1,18 +1,51 @@
 {
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier",
+    "stylelint-config-recommended-scss"
+  ],
   "plugins": [
     "stylelint-prettier",
-    "stylelint-scss"
+    "stylelint-scss",
+    "stylelint-order",
+    "stylelint-csstree-validator"
   ],
   "rules": {
-    "at-rule-no-unknown": null,
-    "scss/at-rule-no-unknown": true,
-    "block-closing-brace-newline-after": "always-multi-line",
-    "block-closing-brace-empty-line-before": "never",
-    "block-closing-brace-space-before": "always",
-    "block-opening-brace-space-after": "always",
-    "block-opening-brace-space-before": "always",
-    "block-closing-brace-newline-before": "always-multi-line",
-    "block-opening-brace-newline-after": "always-multi-line",
-    "indentation": 4
+    "selector-class-pattern": null,
+    "indentation": 2,
+    "order/properties-order": ["display","position", "z-index", "top", "right", "bottom", "left"],
+    "rule-empty-line-before": "always",
+    "at-rule-empty-line-before": "always",
+    "selector-max-id": 2,
+    "csstree/validator": {
+      "syntaxExtensions": ["sass", "less"]
+    },
+    "no-empty-source": [true,{
+      "severity": "warning"
+    }
+    ],
+    "order/order": [
+      "declarations",
+      {
+        "type": "at-rule",
+        "name": "media"
+      },
+      {
+        "type": "rule",
+        "selector": "^&::(before|after)"
+      },
+      {
+        "type": "rule",
+        "selector": "^&:\\w"
+      },
+      {
+        "type": "rule",
+        "selector": "^&_"
+      },
+      {
+        "type": "rule",
+        "selector": "^."
+      }
+    ]
   }
 }
