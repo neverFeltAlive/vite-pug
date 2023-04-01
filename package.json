@@ -46,8 +46,8 @@
     }
   },
   "lint-staged": {
-    "**/*.{js,pug,scss,css}": [
-      "npx prettier --write src/**/**.{js,pug,scss,css}",
+    "**/*.{js,pug}": [
+      "npx prettier --write src/**/**.{js,pug}",
       "npx eslint --fix"
     ],
     "**/*.{css,scss}": [
