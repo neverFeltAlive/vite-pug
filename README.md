@@ -13,10 +13,11 @@ You can simply clone this repository and install neccessary dependensies with:
 npm i
 ```
 
-Or use an npm package for automated setup:
+Or use a npm package for automated setup:
 ```bash
 npx create-vite-native-app
 ```
+For more details about the package checkout [its npm page](https://www.npmjs.com/package/create-vite-native-app).
 
 ## Working with pages
 
@@ -37,7 +38,6 @@ To use it you simply need to follow this project structure:
     │   │       index.pug
     │   └───test
     │           index.pug
-    ├───styles
     └───utils
 ```
 
@@ -49,6 +49,43 @@ Simply create a ***pages*** folder inside your root directory (in my case it is 
 > - index.json
 >
 > directly in the ***pages*** directory. They are used to create an Index page which contains all the links to the existing pages on the project. This files are not  going to be included in your production build.
+
+## More about architecture 
+
+This architecture is created with an idea of further integration with a backend framework.
+The idea is that pages consist off *reusable components* and *components unique to a specific page*.
+
+- pages are stored under `src/pages` folder (with `index.pug` as an entry point).
+- reusable components are stored in components folder
+- non-reusable components are stored in the folder of a specific page.
+
+For example, you have a page called ***Test***, a reusable component called ***Counter*** and a unique component called ***TestComponent*** (which is only used on ***Test*** page).
+Your project structure would look something like this: 
+```bash
+└───src
+    ├───assets
+    ├───components
+    │   └───counter
+    │         index.pug
+    │         index.js
+    │         style.scss
+    ├───pages
+    │   └───test
+    │       │   index.pug
+    │       └───testComponent
+    │               index.pug
+    │               index.js
+    │               style.scss
+    └───utils
+```
+
+All styles are imported in `/src/utils/main.scss`.
+And all JS files are imported in `/src/utils/main.js`
+These files are linked in `/src/utils/template.pug`.
+
+> #### Note
+> If you use ***create-vite-native-app*** utility you can automate the process of creating components and pages using `--component` and `--page` options.
+> Check out [this utility](https://www.npmjs.com/package/create-vite-native-app) for more details
 
 ## Vite SVG Sprite Plugin
 
