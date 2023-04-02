@@ -1,14 +1,12 @@
 {
   "extends": [
     "stylelint-config-standard-scss",
-    "stylelint-config-prettier",
     "stylelint-config-recommended-scss"
   ],
   "plugins": [
     "stylelint-prettier",
     "stylelint-scss",
-    "stylelint-order",
-    "stylelint-csstree-validator"
+    "stylelint-order"
   ],
   "rules": {
     "selector-class-pattern": null,
@@ -17,9 +15,6 @@
     "rule-empty-line-before": "always",
     "at-rule-empty-line-before": "always",
     "selector-max-id": 2,
-    "csstree/validator": {
-      "syntaxExtensions": ["sass", "less"]
-    },
     "no-empty-source": [true,{
       "severity": "warning"
     }
