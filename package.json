@@ -14,6 +14,8 @@
   "devDependencies": {
     "@prettier/plugin-pug": "^2.4.2",
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^6.0.0",
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-pug": "^1.2.5",
@@ -21,7 +23,9 @@
     "husky": "^8.0.0",
     "lint-staged": "^13.2.0",
     "nodejs-logger-n": "^1.0.3",
+    "postcss": "^8.4.21",
     "postcss-nesting": "^11.2.2",
+    "postcss-sorting": "^8.0.2",
     "prettier": "^2.8.7",
     "pug": "^3.0.2",
     "sass": "^1.60.0",
@@ -45,6 +49,10 @@
       "pre-commit": "lint-staged"
     }
   },
+  "browserslist": [
+    "last 2 versions",
+    "not IE 11"
+  ],
   "lint-staged": {
     "**/*.{js,pug}": [
       "npx prettier --write src/**/**.{js,pug}",
