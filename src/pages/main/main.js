@@ -1,7 +1,5 @@
 import { setupCounter } from '@components/counter/counter.js';
 
-import '@styles/style.css';
-
 document.querySelector('#app').innerHTML = `
   <div>
     <h1>Hello Vite!</h1>
