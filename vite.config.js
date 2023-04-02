@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite';
 
 import { join, resolve } from 'path';
-import { getRollupInput } from 'vite-mpa';
-import svgSpritePlugin from 'vite-sprite-svg';
+import pages, { getRollupInput } from 'vite-mpa';
+import svg from 'vite-sprite-svg';
 
 import pug from './plugins/pug/vite-plugin-pug.js';
 
@@ -13,21 +13,23 @@ const root = './src';
 const port = 3000;
 
 export default defineConfig(({ command }) => {
+  const isDev = command !== 'build';
   return {
     plugins: [
       pug(),
-      svgSpritePlugin({
+      svg({
         baseDir: rootDir,
         publicDir,
-        isDev: command !== 'build',
+        isDev: isDev,
       }),
+      pages(isDev),
     ],
     publicDir: publicDir,
     root: root,
     build: {
       outDir: resolve(__dirname, 'dist'),
       rollupOptions: {
-        input: getRollupInput({ root, rootDir, port, pagesDir }, command !== 'build'),
+        input: getRollupInput({ root, rootDir, port, pagesDir }, isDev),
       },
       emptyOutDir: true,
     },

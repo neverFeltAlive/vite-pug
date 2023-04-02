@@ -38,9 +38,9 @@
     "stylelint-scss": "^4.6.0",
     "svgo": "^3.0.2",
     "vite": "^4.2.0",
-    "vite-mpa": "^1.0.7",
+    "vite-mpa": "^1.1.3",
     "vite-plugin-eslint": "^1.8.1",
-    "vite-sprite-svg": "^1.0.8"
+    "vite-sprite-svg": "^1.1.0"
   },
   "husky": {
     "hooks": {
